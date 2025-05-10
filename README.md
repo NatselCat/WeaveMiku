@@ -1,2 +1,2 @@
-# Hu Tao
-> Draws a dancing Hu Tao (you are lonely)
+# Hatsune Miku
+> Draws a dancing Miku
