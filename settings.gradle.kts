@@ -1,4 +1,4 @@
-rootProject.name = "HuTao"
+rootProject.name = "WeaveMiku"
 
 pluginManagement {
     repositories {

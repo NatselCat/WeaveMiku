@@ -6,9 +6,9 @@ import org.jetbrains.annotations.NotNull;
 import static wtf.ultra.hutao.HuTao.enabled;
 import static wtf.ultra.hutao.HuTao.setEnabled;
 
-public class httoggle extends Command {
-    public httoggle() {
-        super("httoggle");
+public class hmtoggle extends Command {
+    public hmtoggle() {
+        super("hmtoggle");
     }
 
     @Override

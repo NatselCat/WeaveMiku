@@ -1,6 +1,6 @@
 package wtf.ultra.hutao;
 
-import wtf.ultra.hutao.command.httoggle;
+import wtf.ultra.hutao.command.hmtoggle;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
@@ -18,21 +18,21 @@ import java.util.stream.IntStream;
 @SuppressWarnings("unused")
 public class HuTao implements ModInitializer {
     private static final ResourceLocation[] images;
-    private final long mspf = 100;
+    private final long mspf = 200;
     private long instant = 0;
     private int frame = 0;
     public static boolean enabled = false; // the mode by default is off
 
     public static void setEnabled(boolean value) {
         enabled = value;
-        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.GRAY + "HuTao has been " + (enabled ? "enabled" : "disabled") + "."));
+        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.GRAY + "Miku has been " + (enabled ? "enabled" : "disabled") + "."));
     }
 
     @Override
     public void preInit() {
 
-        System.out.println("[HuTao] Initializing");
-        CommandBus.register(new httoggle()); // command name
+        System.out.println("[Miku] Initializing");
+        CommandBus.register(new hmtoggle()); // command name
 
         EventBus.subscribe(RenderGameOverlayEvent.Pre.class, event -> {
             if (enabled) {
@@ -54,8 +54,8 @@ public class HuTao implements ModInitializer {
     }
 
     static {
-        images = new ResourceLocation[27];
-        IntStream.range(0, 27).forEach(i -> images[i] = new ResourceLocation(String.format("hutao/dance/dance%d.png", i + 1)));
+        images = new ResourceLocation[4];
+        IntStream.range(0, 4).forEach(i -> images[i] = new ResourceLocation(String.format("miku/dance/dance%d.png", i + 1)));
     }
 
     public static void main(String[] args) {
